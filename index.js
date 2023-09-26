@@ -66,7 +66,7 @@ app.delete('/reviews/:id', async function(req,res){
     await pool.execute("DELETE FROM reviews WHERE id = ?", [req.params.id]);
     res.json({
         "success": true
-    })
+    });
 })
 
 app.listen(8080, function(){
